@@ -36,6 +36,20 @@ switch (userType) {
     default:
         userCategory = "Unknown";
 }
+switch (userCategory) {
+    case "Employee":
+        console.log("User is ", userCategory, "- Full access");
+        break;
+    case "Enrolled Member":
+        console.log("User is ", userCategory, "- Full access and one-on-one interaction");
+        break;
+    case "Subscriber":
+        console.log("User is ", userCategory, "- Partial access")
+        break;
+    default:
+        userCategory = "Non-Subscriber";
+        console.log("User is ", userCategory, "- No access")
+}
 console.log("Access Level:", accessLevel);
 console.log("User Message:", userMessage);
 console.log("User Category:", userCategory);
