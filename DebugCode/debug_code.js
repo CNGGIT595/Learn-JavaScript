@@ -7,11 +7,13 @@
     if (!isNaN(num1) && !isNaN(num2)) {
     // Perform the operation
                     let result = multiply(num1, num2);
+                    let result2 = addition(num1, num2);
+                    let result3 = division(num1, num2);
 
                     // Display the result
-                    displayResult(result);
+                    displayResult(result, result2, result3);
                 } else {
-                    displayResult('Please enter valid numbers');
+                    displayResult('Please enter valid numbers', '', '');
                 }
             }
 
@@ -22,10 +24,25 @@
                 // Multiply the numbers
                 return a * b;
             }
+            function addition(a, b) { 
+                debugger; 
+                return a + b; 
+            }
+            function division(a, b) { 
+                debugger; 
+                if (b == 0) 
+                    return ('Number 2 cannot be zero')
+                else 
+                    return a / b; 
+            }
 
-            function displayResult(result) {
+            function displayResult(result, result2, result3) {
                 // Display the result in the paragraph element
                 const resultElement = document.getElementById('result');
-                resultElement.textContent = `The result is: ${result}`;
+                const resultElement2 = document.getElementById('result2');
+                const resultElement3 = document.getElementById('result3');
+                resultElement.textContent = `The Multiply result is: ${result}`;
+                resultElement2.textContent = `The Addition result is:  ${result2}`; 
+                resultElement3.textContent = `The Division result is: ${result3}`;
             }
         
